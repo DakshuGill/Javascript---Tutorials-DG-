@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Myntra_Practice</title>
+<style>
+.first {
+    background-color: rgb(139, 230, 139);
+    border-radius : 10px;
+    border : none;
+    padding-left : 25px;
+    padding-right : 25px;
+    padding-top : 6px;
+    padding-bottom : 6px;
+    margin : 5px;
+}
+.third {
+    background-color: rgb(221, 255, 0);
+    border-radius : 10px;
+    /* border : none; */
+    padding-left : 25px;
+    padding-right : 25px;
+    padding-top : 6px;
+    padding-bottom : 6px;
+    margin : 5px;
+}
+#second {
+    border-radius : 10px;
+    padding-left :45px;
+    padding-right : 45px;
+    padding-top : 6px;
+    padding-bottom : 6px;
+}
+</style>
+</head>
+<body>
+    <center>
+    <img src="myntra-logo.jpg"></img> <br>
+    <h1> Welcome to Myntra winter sale. <br>Buy 1 item and get 2 at flat ₹200. <br></h1>
+    <hr>
+    <button class="first" onclick="cartQuantity = cartQuantity + 1;
+    document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} items`;
+    "><b>Add to Bag</b></button>
+    <button id="second" onclick="cartQuantity = cartQuantity - 1;
+    document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} items`;
+    "><b>MOVE TO WISHLIST</b></button>
+    <button class="first"><b>Offer - Add "1+1" sale item</b></button>
+    <button class="third" onclick="cartQuantity = cartQuantity;
+    document.querySelector('#bag-summary').innerText = `Your Cart has ${cartQuantity} items`;
+    "><b>Total Items in Cart!</b></button>
+     <button class="third" onclick="cartQuantity = cartQuantity;
+     document.querySelector('#amount-summary').innerText = `Your total amount is ${cartQuantity*200} items`;
+     "><b>Press : Your total amount </b></button>
+    <h1 id="cart-summary"></h1>
+    <h2 id="bag-summary"></h2>
+    <h1 id="amount-summary"></h1>
+    <h2>Thanks for visiting Myntra!</h2>
+
+</center>
+    <script>
+let cartQuantity = 0;
+document.querySelector('#cart-summary').innerText = `Your Bag has ${cartQuantity} items`;
+document.querySelector('#bag-summary').innerText = `Your Cart has ${cartQuantity} items`;
+document.querySelector('#amount-summary').innerText = `Your total amount is ${cartQuantity} items`;
+
+    </script>
+</body>
+</html>
