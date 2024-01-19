@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice_Exercise_Functions</title>
+</head>
+<body>
+
+    <script>
+// Function to check if number is even or odd.
+function checkEvenOdd(num) {
+    if( num%2 === 0 ) {
+        return 'Number is Even';
+    }
+    else {
+        return 'Number is odd';
+    }
+}
+console.log( checkEvenOdd(68515) );
+
+// Function to check the largest of two numbers.
+function checkLarger (num1, num2) {
+if( num1 > num2 ) {
+    return 'num1 is larger than num2';
+}
+else {
+    return 'num2 is larger than num1';
+}
+}
+console.log( checkLarger(25,19) );
+
+// Creating a method to convert Celcius to Fahrenheit.
+function convertTemp(cel) {
+    fah = (9/5)*cel + 32;
+    return fah;
+}
+console.log( convertTemp(63) );
+console.log( convertTemp(0) );
+console.log( convertTemp(100) );
+console.log( convertTemp(49) );
+console.log( convertTemp(8) );
+
+    </script>
+</body>
+</html>
