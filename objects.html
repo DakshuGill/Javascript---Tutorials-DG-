@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+let user = { // here user is object (key : value,)
+name : "DAKSHU", // object user property1 - name
+height : 5.11, // object user property2 - height
+age : 21 // object user property3 - age
+};
+console.log( typeof(user) );
+console.log( user );
+console.log( user.name );
+console.log( user.height );
+console.log( user.age );
+
+let product = {
+item_name : "Denim Jacket",
+'item-name' : "Blck-Jacket",
+brand : "ZARA",
+price : 550,
+color : "Black"
+};
+let product_name = 'item_name';
+console.log( product[product_name] );
+console.log( typeof(product) );
+console.log( product.brand );
+console.log( product['brand'] );
+console.log( product['item-name'] );
+console.log( product.item_name );
+console.log( product.brand );
+console.log( product.price );
+console.log( product.color );
+console.log( product );
+delete(product.price);
+delete(product['color']);
+console.log( product );
+
+// NOTE *** -     console is an object and log is a method inside them.
+
+// Inside nested Objects Example-
+let cart_item = {
+    company : 'Mango',
+    item_name : 'Black woolen jacket',
+    price : 850,
+    rating : {
+        stars : 4.8,
+        noOfReviews : 93
+    },
+    displayPrice : function() { // these fun inside objects are called as methods and are accessed as "cart_item.displayPrice();".
+    console.log(`Price of the product is $ 
+    ${this.price}`)  // this is used to point to current object.
+    // ${cart_item.price}`)      
+    // return `$${this.price.toFixed(2)}`;
+    }
+};
+cart_item.displayPrice();
+
+// Autoboxing concept- Autoboxing means the automatic conversion of primitives to objects. It allows the object's properties and methods to be used on primitives. For ex: the strings have properties and methods like to lowercase, uppercase, length.
+console.log('Hi! This is Dakshu Gill from Noida');
+console.log('Hi! This is Dakshu Gill from Noida'.length);
+console.log('Hi! This is Dakshu Gill from Noida'.endsWith.Noida);
+console.log('Hi! This is Dakshu Gill from Noida'.lastIndexOf('Noida'));
+console.log('Hi! This is Dakshu Gill from Noida'.replace('Noida', 'Rohtak'));
+
+// Object References in Javascript - Pass by value, Pass by Reference.
+// Changes to even anyone reference affects the change in all the references of object
+
+// Pass by Value-
+let num1 = 8;
+let num2 = num1;
+console.log(`num1 = ${num1}, num2 = ${num2}`);
+num1 = 5;
+console.log(`num1 = ${num1}, num2 = ${num2}`);
+
+// // Pass by reference - copies or points to the reference of the object but not the value of that opnect hence changes successfully.
+let car1 = {model : 2008};
+let car2 = car1;
+console.log(` car1 = ${car1.model}, car2 = ${car2.model} `);
+car1.model = 2005;
+console.log(` car1 = ${car1.model}, car2 = ${car2.model} `);
+
+let p = {pop : 'You are good'};
+let q = {pop : 'You are good'};
+console.log( p == q );
+console.log( p === q );
+
+// De-structuring : Extracting more than one properties from objects easily.
+let company = {
+    name : 'Big-Oh',
+    location : 'Sector-2, Noida',
+    noEmployees : 200
+};
+//  name = company.name; 
+// same as
+let { name } = company;
+
+// Shorthand Property : {message : message} is same as message.
+let price = 960;
+let room = {
+    number : 101,
+    room_name : `Dakshu's room`,
+    price : price
+};
+// is same as
+let room1 = {
+    number : 101,
+    room_name : `Dakshu's room`,
+    price
+}
+
+// Shorthand Method : Define methods directly insise the object without the function keyword.
+let home = {
+    number : 101,
+    room_name : `Dakshu's room`,
+    price : 500,
+    displayPrice : function() {
+        return ` $${this.price.toFixed(2)}`;
+    }
+};
+// is same as
+let home_tour = {
+    number : 101,
+    room_name : `Dakshu's room`,
+    price : 500,
+    displayPrice() {
+        return ` $${this.price.toFixed(2)}`;
+    }
+};
+
+    </script>
+</body>
+</html>
