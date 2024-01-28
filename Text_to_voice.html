@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text to Voice calculator</title>
+    <link rel="stylesheet" href="text_to_voice.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="image">
+            <img src="text.jpg" width="150px" height="150px"/>
+            <img src="equal.jpg" width="200px" height="150px" style="margin: 0px 100px 0px 100px;" />  
+            <img src="speak.png" width="150px" height="150px"/>
+        </div> <hr><hr>
+<h1><b>Text To Speech <span>Converter</span> !</b></h1>
+<textarea placeholder="Write/Type anything here..."></textarea>
+<div class="row">
+    <select></select>
+    <button><img src="play.png">LISTEN</button>
+</div>
+    </div>
+<script>
+    // The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands .
+    // It contains the content of speech service should read and information about how to read it (e.g. language, pitch and volume.)
+    // The onvoiceschanged property of the SpeechSynthesis interface represents an event handler that will run when the list of SpeechSynthesisVoice objects that would be returned by the SpeechSynthesis.
+    let speech = new SpeechSynthesisUtterance(); 
+    let voices = [];
+    let voiceSelect = document.querySelector("select");
+    window.speechSynthesis.onvoiceschanged = () => {
+        voices = window.speechSynthesis.getVoices();
+        speech.voice = voices[0];
+        voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)));
+    }
+    voiceSelect.addEventListener("change", () => {
+        speech.voice = voices[voiceSelect.value];
+    });  
+    document.querySelector("button").addEventListener("click", () => {
+    speech.text = document.querySelector("textarea").value;
+    window.speechSynthesis.speak(speech);
+    });
+
+</script>
+
+</body>
+</html>
