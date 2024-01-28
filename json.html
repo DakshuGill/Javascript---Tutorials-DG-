@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON Projects</title>
+</head>
+<body>
+<!-- JSON - Javascript Object Notation
+JS Objects
+{firstName : "Dakshu", // Key
+lastName : "Gill" // Value
+}
+JSON.parse() - both key and value are strings
+It converts any JS Object into JSON Object
+{"firstName" : "Dakshu", // Key
+"lastName" : "Gill" // Value
+}
+JSON.stringify() - only values in double inverted not keys
+It converts any JSON object into strings
+{firstName : "Dakshu", // Key
+lastName : "Gill" // Value
+} -->
+<!--  Its easy to convert Javascript object into JSON Object.  -->
+
+
+<script>
+
+let product = {
+    name : "Tshirt",
+    price : 985,
+    rating : { // nested object creation
+        stars : 4.8,
+        noOfReviews : 500,
+    },
+};
+
+// console.log(typeof product); // object
+// console.log(product);
+// let str = JSON.stringify(product);
+// console.log(typeof str); //  string
+// console.log(str);
+
+// let newProduct = JSON.parse(str);
+// console.log(typeof newProduct); // object
+// console.log(newProduct);
+// JSON - is just data format and JS - object data structure
+
+// Now this JSON is used for locat storage.
+// JSON is used as local structure and used method as setItem & this method takes key and value item.
+// Only strings can be stored. getItem - It retrives data based on key values
+// The other methods are : localStorage.clear(), removeItem().
+
+// Local storage
+// localStorage.setItem('Name', 'Dakshu Gill');
+// localStorage.setItem('Occupation', 'Student' );
+
+// console.log(localStorage.getItem('Name'));
+// localStorage.setItem('product', product);
+// console.log(localStorage.getItem('product'));
+// let product2 = JSON.parse(localStorage.getItem('product'));
+// console.log(product2);
+// lastStorage.removeITEM(('Price'));
+// localStorage.clear();
+
+</script>
+
+</body>
+</html>
