@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date in Javascript</title>
+</head>
+<body>
+
+    <button class="my-button">Click Here</button>
+    <!-- 
+        new Date() -> Create a new Date object with the current time and date.
+some key methods of Date in JS ->
+getTime() -> In milliseconds.
+getFullYear() -> Providse 4 digit year.
+getDay() -> Get day of the week.
+getMinutes() -> Current minutes
+getHours() -> Get current hours.
+ -->
+
+ <!-- 
+    DOM (Document Object Model Properties and methods)
+    1) DOM - Element properties
+    1) location
+    2) title
+    3) href
+    4) domain
+    5) innerHTML 
+    6) innerText
+    7) classList
+ 
+    2) DOM and Element methods ->
+    1) getElementById()
+    2) querySelector() 
+    3) classList: add(), remove()
+    4) createElement()
+    5) appendChild()
+    6) removeChild()
+    7) replaceChild()
+    -->
+
+ <script>
+
+// creating new date object
+let myDate = new Date();
+// console.log(myDate());
+console.log(myDate.getTime());
+console.log(myDate.getDate());
+console.log(myDate.getDay());
+console.log(myDate.getFullYear());
+console.log(myDate.getHours());
+console.log(myDate.getMilliseconds());
+console.log(myDate.getMinutes());
+console.log(myDate.getSeconds());
+console.log(myDate.getMonth());
+
+// Creation of button and adding it to any element.
+let button = document.createElement('Button');
+
+// appendChild - addition of button or any text i.e sub child in any class.
+button.innerHTML = 'Click-Me';
+document.querySelector('.my-button').appendChild(button);
+// if on same elemen we have same child object we can remove that using element name.
+document.querySelector('.my-button').removeChild(button);
+</script>
+
+</body>
+</html>
