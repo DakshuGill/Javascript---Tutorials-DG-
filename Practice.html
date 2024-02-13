@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Practice_Exercise_Functions</title>
+    <title>Practice Exercise - Array and Loops</title>
 </head>
 <body>
+    
+<script>
+    let array1 = [5,6];
+    console.log(array1);
+    array.push(7);
+    console.log(array1);
+    array.unshift(4);
+    console.log(array1);
 
-    <script>
-// Function to check if number is even or odd.
-function checkEvenOdd(num) {
-    if( num%2 === 0 ) {
-        return 'Number is Even';
+    function getElement(arr, position) {
+        return arr[position-1]; // return position-1 of array.
     }
-    else {
-        return 'Number is odd';
+    let arr1 = [1,2,3,4,5,6,7,8,9];
+    console.log(getElement(arr1, 3));
+
+    function arrCopy(arr) {
+        return arr.slice(0, arr.length);
+    }
+
+    let arr2 = [8,4,6,9,7];
+    console.log(arrCopy(arr2));
+
+     function isPrime(num) {
+        for( let i=2; i<num; i++ ) {
+            if( num%i === 0 ) {
+                return false;
+            }
+        }
+        return true; 
+     }
+
+     let num2 = 2;
+     let i = 0;
+     while( true ) {
+        if(isPrime(num2)) {
+            console.log(num2);
+            i++;
+            if( i >= 5 ) {
+                break;
+            }
+        }
+        num++;
+     }
+
+    // let nums = 10;
+    // for( let i= nums; i > 0; i--) {
+        console.log(nums);
+        nums--;
+    // }
+
+    // let array = [1, -6, 5, 7, -98];
+    // for( let i=0; i<array.length; i++ ) {
+    //     if( array[i] > 0 ) {
+    //         console.log(array[i]);
+    //         continue;
+    //     }
+    // }
+
+    // let array = ['Dakshu', 'Gill', 'Javascript', 'Course', 'Is', 'Best'];
+    // let result = '';
+    // for( let i=0; i<array.length; i++ ) {
+    //     result += array[i] + ' ';
+    //         }
+    //         console.log(result);
+
+    //         console.log(array.join(","));
+    //         console.log(array.join("+"));
+    //         console.log(array.join(" "));
+
+let num;
+for( let i=2; i<=5; i++ ) {
+    while(num%i == 0){
+        console.log(num);
     }
 }
-console.log( checkEvenOdd(68515) );
 
-// Function to check the largest of two numbers.
-function checkLarger (num1, num2) {
-if( num1 > num2 ) {
-    return 'num1 is larger than num2';
-}
-else {
-    return 'num2 is larger than num1';
-}
-}
-console.log( checkLarger(25,19) );
+</script>
 
-// Creating a method to convert Celcius to Fahrenheit.
-function convertTemp(cel) {
-    fah = (9/5)*cel + 32;
-    return fah;
-}
-console.log( convertTemp(63) );
-console.log( convertTemp(0) );
-console.log( convertTemp(100) );
-console.log( convertTemp(49) );
-console.log( convertTemp(8) );
-
-    </script>
 </body>
 </html>

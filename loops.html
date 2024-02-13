@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loops in Javascript</title>
+</head>
+<body>
+<!-- This loops JS contains
+What is array
+array syntax and values
+array properties and methods
+what is loop
+while loop
+for loop
+do while loop
+accumulator pattern - sum of array sum
+Break and continue
+-->
+
+    <script>
+        let number = 1;
+        while( number <=11 ) {
+            console.log(number);
+            number++;
+        } 
+        console.log(number);
+
+        // while loop
+let y = 0;
+while( y < 1 ) {
+    console.log(y);
+    y = Math.random*2;
+}
+console.log('The final value of y is: ' + y);
+
+// for loop
+
+for( let number=1; number<=10; number++ )
+{
+    console.log(number);
+}
+
+// for loop in JS
+let num2 = [25, -9, 57, 23, -41, 56, -74];
+for( let i=0; i<num.length; i++ ) {
+    console.log(num2[i]);
+}
+
+// Accumulater pattern in Javascript.
+// Printing sum of array numbers in Javascript >>
+let num1 = [9,5,8,4,7,21];
+let sum = 0;
+for( let i=0; i<num1.length; i++ ) {
+    sum = sum + num1[i];
+    console.log(sum);
+}
+console.log('The final array sum is ' + sum);
+
+let squares = [];
+for( let i=0; i<num1.length; i++ ) {
+    squares[i] = num1[i]*num1[i];
+    // console.log(squares);
+    squares.push(num1[i]*num1[i]);
+    console.log(squares);
+}
+console.log(squares);
+
+let triplets = [];
+for( let i=0; i<num1.length; i++ ) {
+    triplets[i] = num1[i]*num1[i]*num1[i];
+    console.log(triplets);
+    triplets.push(num1[i]*num1[i]*num1[i]);
+    console.log(triplets);
+}
+console.log(triplets);
+
+let num3=1;
+while( num3 <= 15 ) {
+    console.log('Dakshu Gill');
+    num3++;
+    if( num3 == 11 )
+    break;
+    console.log(num3);
+}
+
+let num=1;
+while( num <= 15 ) {
+    console.log('Dakshu Gill');
+    num++;
+    if( num == 11 )
+    continue;
+    console.log(num);
+}
+
+for( let i=0; i<30; i++ ) {
+    if( i%2 == 0 ) {
+        continue;
+    }
+    console.log(i);
+}
+
+    </script>
+</body>
+</html>
