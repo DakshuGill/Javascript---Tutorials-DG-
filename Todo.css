@@ -1,0 +1,42 @@
+body {
+    font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-geometric-pattern-white-gold-minimalist-creative-background-picture-image_1575961.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ }
+
+#main-heading {
+text-align : center;
+}
+
+.grid-container {
+    display : grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap : 15px;
+    row-gap : 15px;
+    margin-top : 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#todo-input, #todo-date {
+    font-size : 15px;
+    padding : 10px 15px;
+}
+
+.btn-delete {
+    background-color: rgb(255, 145, 2);
+    color : white;
+    border : none;
+    border-radius : 10px;
+    padding : 15px 0px;
+}
+
+.btn-todo {
+    background-color: rgb(58, 119, 4);
+    color : white;
+    border : none;
+    border-radius : 10px;
+    padding : 15px 0px; 
+}
